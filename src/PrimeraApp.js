@@ -20,7 +20,6 @@ const PrimeraApp = ({
 
 PrimeraApp.propTypes = {
     saludo: PropTypes.string.isRequired
-
 }
 
 PrimeraApp.defaultProps = {
