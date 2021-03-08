@@ -1,6 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const PrimeraApp = ({ saludo = 'Hola no reportado' }) => {
+const PrimeraApp = ({
+    saludo,
+    subtitulo 
+}) => {
 
     //const saludo = 'Hola Mundo';
 
@@ -8,10 +12,19 @@ const PrimeraApp = ({ saludo = 'Hola no reportado' }) => {
         <>
             <h1> { saludo } </h1>
             {/*<h1> { JSON.stringify( saludo, null, 3 ) } </h1>*/}
-            <p>Mi primera Aplicacion</p>
+            <p>{ subtitulo }</p>
         </>
     );
 
 }
 
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired
+
+}
+
+PrimeraApp.defaultProps = {
+    subtitulo: 'Soy un subtitulo'
+}
+ 
 export default PrimeraApp;
